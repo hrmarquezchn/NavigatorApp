@@ -3,7 +3,7 @@ import React from "react";
 import { useContextUsuario } from "../Context/ContextProvider";
 
 export default function ListaUsuario() {
-    
+
   const { listaUsuario } = useContextUsuario();
   return (
     <FlatList
@@ -23,17 +23,17 @@ export default function ListaUsuario() {
 
   );
 }
-const stryles = StyleSheet.create({
-    listTitles:{
+const styles = StyleSheet.create({
+    listTitles: {
         fontSize: 14,
         fontWeight: 'bold',
-        marginTop: 20
-    }
-    userItem:{
-        borderWidth:1
-        borderColor: 'gray',
-        paddin:10,
-        marginVertical: 5
-    },
+        marginTop: 20,
+    }, 
 
+    userItem: {
+        borderWidth: 1, 
+        borderColor: 'gray',
+        padding: 10, 
+        marginVertical: 5,
+    },
 });

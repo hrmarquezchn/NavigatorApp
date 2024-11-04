@@ -5,11 +5,13 @@ import { NavigationContainer } from '@react-navigation/native'
 import Home from '../Page/Home/Home'
 import Usuario from '../Page/Usuario/Usuario'
 import Configuraciones from '../Page/Configuraciones/Configuraciones'
+import { useTheme } from '../Context/ThemeContext';
 
 
 export default function NavBar() {
 
  const drawer= createDrawerNavigator()
+ const { isDarkTheme } = useTheme();
 
   return (
    
