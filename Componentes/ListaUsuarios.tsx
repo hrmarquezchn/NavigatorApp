@@ -1,8 +1,9 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import React from "react";
-import { useContextUsuario } from "../Context/ContexProvider";
+import { useContextUsuario } from "../Context/ContextProvider";
 
 export default function ListaUsuario() {
+    
   const { listaUsuario } = useContextUsuario();
   return (
     <FlatList

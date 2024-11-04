@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import React, { ReactNode, useContext, useState, useEffect } from 'react'
 import { Usuario } from '../Modelos/Usuarios';
+import { contextoUsuario } from '../Context/Context'
 
 interface ViewReact{
     children: ReactNode
@@ -53,7 +54,7 @@ export default function ContextProvider( {children}: ViewReact) {
 
   return ( 
     <View>
-      <contextUsuario.Provider value={{
+      <contextoUsuario.Provider value={{
             nombre,
             apellido,
             correo,
@@ -70,11 +71,11 @@ export default function ContextProvider( {children}: ViewReact) {
       }} >
         
         {children}
-        </contextUsuario.Provider>
+        </contextoUsuario.Provider>
     </View>
   )
 }
 
 export const useContextUsuario = () =>{
-    return useContext(contextUsuario)
+    return useContext(contextoUsuario)
 }
